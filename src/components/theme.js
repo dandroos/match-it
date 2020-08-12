@@ -22,6 +22,13 @@ const theme = createMuiTheme({
     overline: { fontFamily: "IBM Plex Sans" },
     caption: { fontFamily: "IBM Plex Sans" },
   },
+  overrides: {
+    MuiAppBar: {
+      colorTransparent: {
+        boxShadow: "none",
+      },
+    },
+  },
 });
 
 export default responsiveFontSizes(theme);

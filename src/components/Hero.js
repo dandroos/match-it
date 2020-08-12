@@ -16,20 +16,19 @@ const Hero = () => {
         <Box align="center" position="relative" borderRadius="borderRadius">
           <Typography variant="h2">Make Memorizing Fun!</Typography>
           <Typography variant="subtitle1" paragraph>
-            Dolor esse ipsum officiis est laudantium Tempore autem et vitae
-            ratione tempore! Libero vitae inventore dolor fugiat laboriosam.
-            Laudantium nam explicabo sapiente?
+            From learning a new language to revising for an exam, use{" "}
+            <strong>Match It!</strong> to memorize only what you need to!
           </Typography>
           <Box mt={2} align="inherit">
             <Grid container spacing={1} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary" size="large">
-                  Primary action
+                  New Game
                 </Button>
               </Grid>
               <Grid item>
                 <Button variant="contained" color="secondary" size="large">
-                  Secondary action
+                  New Collection
                 </Button>
               </Grid>
             </Grid>
