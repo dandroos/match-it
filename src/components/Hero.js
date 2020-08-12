@@ -1,9 +1,20 @@
 // Hero.js
 import React from "react";
-import { Box, Typography, Button, Container, Grid } from "@material-ui/core";
+import {
+  Box,
+  Typography,
+  Button,
+  Container,
+  Grid,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import illustration from "../study.svg";
 
 const Hero = () => {
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Box
       minHeight="100vh"
@@ -21,7 +32,7 @@ const Hero = () => {
         left={0}
         justifyContent="flex-end"
         alignItems="flex-end"
-        position="absolute"
+        position={isMobile ? "relative" : "absolute"}
       >
         <img
           src={illustration}
@@ -29,7 +40,11 @@ const Hero = () => {
         />
       </Box>
       <Container>
-        <Box align="left" position="relative" borderRadius="borderRadius">
+        <Box
+          align={isMobile ? "center" : "left"}
+          position="relative"
+          borderRadius="borderRadius"
+        >
           <Typography variant="h2">Make Memorizing Fun!</Typography>
           <Typography variant="subtitle1" paragraph>
             From learning a new language to revising for an exam, use{" "}
