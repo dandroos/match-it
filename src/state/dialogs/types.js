@@ -1,0 +1,1 @@
+export const SET_NEW_GAME_OPEN = "SET_NEW_GAME_OPEN";
